@@ -6,8 +6,8 @@ API used: https://github.com/twelvedata/twelvedata-python
 
 Install:
 
-    pip install twelvedata[pandas,matplotlib,plotly,websocket-client]
+    pip install requests
 
 Compile & Run:
 
-    python3 main.py
+    python3 main.py or py main.py

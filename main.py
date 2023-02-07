@@ -1,18 +1,15 @@
 import API_Key
-from twelvedata import TDClient
 
+import requests
+import time
+
+apiKey = API_Key.Token
 ticker = input("Please enter a stock ticker: ")    
 
-td = TDClient(apikey=API_Key.Token)
+def getDividends(input_ticker, input_apiKey):
+    url = f"https://api.twelvedata.com/dividends?symbol={input_ticker}&range=full&apikey={input_apiKey}"
+    response = requests.get(url).json()
+    return response
 
-expirations = td.get_options_expiration(
-    symbol="AAPL",
-).as_json()['dates']
-
-put_options = td.get_options_chain(
-    symbol="AAPL",
-    side="put",
-    expiration_date=expirations[0]
-).as_json()['puts']
-
-print(put_options)
+daReturn = getDividends(ticker, apiKey)
+print(daReturn)
