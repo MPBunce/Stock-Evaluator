@@ -2,12 +2,11 @@
 
 Project to help me evaluate individual stocks
 
-API used: https://site.financialmodelingprep.com/developer/docs/
+API used: https://github.com/twelvedata/twelvedata-python
 
 Install:
 
-    pip install websockets
-    pip install tabulate
+    pip install twelvedata[pandas,matplotlib,plotly,websocket-client]
 
 Compile & Run:
 
