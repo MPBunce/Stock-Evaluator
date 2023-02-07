@@ -6,7 +6,7 @@ API used: https://github.com/twelvedata/twelvedata-python
 
 Install:
 
-    pip install requests
+    pip install yfinance
 
 Compile & Run:
 
