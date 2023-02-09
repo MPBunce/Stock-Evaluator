@@ -1,4 +1,4 @@
-def getDividendInfo(stockObject):
+def getDividendHistory(stockObject):
 
     #getting info and converting to dict
     stockDividendInfo = stockObject.dividends
@@ -12,4 +12,9 @@ def getDividendInfo(stockObject):
     for n in df_dict:
         print(f"Date: {n}, Dividend Paid =  ${df_dict[n]}")
 
-  
+def swedishInvestorRatios(stockObject):
+    # show earnings
+    print(stockObject.history(period="12mo"))
+
+    stockObject.history_metadata   
+    print(stockObject.earnings)
